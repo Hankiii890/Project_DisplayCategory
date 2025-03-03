@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Каталог товаров</title>
+</head>
+<body>
+    <h1>Каталог товаров</h1>
+    <a href="{% url 'add_category' %}">Добавить категорию</a> |
+    <a href="{% url 'add_product' %}">Добавить товар</a>
+    <ul>
+        {% for category in categories %}
+            <li>
+                <h3>{{ category.name }}</h3>
+                <a href="{% url 'delete_category' category.pk %}">Удалить категорию</a>
+                <ul>
+                    {% for product in category.products.all %}
+                    <li>{{product.name}} - {{ product.price}₽
+
+
+
+
+</body>
+</html>
