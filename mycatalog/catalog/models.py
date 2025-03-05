@@ -11,7 +11,7 @@ class ProductCategory(MPTTModel):
         return self.name
 
     class MPTTMeta:
-        """Принимаем список полей, по которым будет происходить сортировка."""
+        """Сортировка категории будет происходить по имени"""
         order_insertion_by = ['name']
 
 
